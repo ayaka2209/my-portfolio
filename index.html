@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayaka Toya — Portfolio</title>
+  <!-- flash prevention: set theme before paint -->
+  <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})()</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Ayaka<span>.</span></a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="テーマ切り替え"></button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="hero-bg-pink"></div>
+      <div class="hero-bg-lime"></div>
+
+      <div class="hero-content">
+        <p class="hero-label">Available for work</p>
+        <h1>
+          Web Developer
+          <span class="name-accent">& Designer.</span>
+        </h1>
+        <p class="hero-desc">
+          Webサービスやアプリを作るのが大好きです。カラフルで使いやすいプロダクトを、フロントからバックエンドまで一貫して構築します。
+        </p>
+        <div class="hero-actions">
+          <a href="works.html" class="btn btn-primary">View Works →</a>
+          <a href="about.html" class="btn btn-secondary">About Me</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-orb"></div>
+      </div>
+
+      <div class="scroll-hint">Scroll</div>
+    </div>
+
+    <section>
+      <div class="section-header">
+        <p class="section-label">Explore</p>
+        <h2>何を見る？</h2>
+      </div>
+      <div class="cards-grid">
+        <a href="about.html" class="card fade-up">
+          <span class="card-icon">🙋‍♀️</span>
+          <h3>About Me</h3>
+          <p>プロフィールやスキル、経歴についてご紹介します。</p>
+          <span class="card-arrow">→</span>
+        </a>
+        <a href="works.html" class="card fade-up">
+          <span class="card-icon">🎨</span>
+          <h3>Works</h3>
+          <p>制作したWebサイトやアプリの作品集をご覧ください。</p>
+          <span class="card-arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-copy">© 2026 Ayaka Toya</p>
+    <p class="footer-mark">Made with <span>♥</span></p>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      function updateIcon(theme) {
+        btn.textContent = theme === 'light' ? '☾' : '☀';
+      }
+      updateIcon(document.documentElement.getAttribute('data-theme') || 'dark');
+      btn.addEventListener('click', function () {
+        var current = document.documentElement.getAttribute('data-theme') || 'dark';
+        var next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateIcon(next);
+      });
+    })();
+  </script>
+
+</body>
+</html>

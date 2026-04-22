@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Ayaka Toya</title>
+  <!-- flash prevention: set theme before paint -->
+  <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})()</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Ayaka<span>.</span></a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="テーマ切り替え"></button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="about-hero">
+      <div class="about-content">
+        <p class="about-label">Profile</p>
+        <h1 class="about-name">Ayaka<br>Toya</h1>
+        <p class="about-role">Web Developer & Designer</p>
+        <div class="about-bio">
+          <p>
+            はじめまして！Webサービスやアプリのフロントエンドからバックエンドまでをカバーするエンジニアです。カラフルで使いやすいUIを作ることが好きで、ユーザーが思わず笑顔になるようなプロダクトを目指しています。
+          </p>
+          <p>
+            普段はDjangoやReactを使った開発をしており、チームでの開発経験も豊富です。
+          </p>
+        </div>
+      </div>
+      <div class="profile-visual">
+        <div class="profile-placeholder">🙋‍♀️</div>
+        <div class="profile-decoration"></div>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <p class="about-label">Skills</p>
+      <div class="skills-grid">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Django</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">HTML / CSS</span>
+        <span class="skill-tag">Git / GitHub</span>
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">Docker</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="footer-copy">© 2026 Ayaka Toya</p>
+    <p class="footer-mark">Made with <span>♥</span></p>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      function updateIcon(theme) {
+        btn.textContent = theme === 'light' ? '☾' : '☀';
+      }
+      updateIcon(document.documentElement.getAttribute('data-theme') || 'dark');
+      btn.addEventListener('click', function () {
+        var current = document.documentElement.getAttribute('data-theme') || 'dark';
+        var next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateIcon(next);
+      });
+    })();
+  </script>
+
+</body>
+</html>
