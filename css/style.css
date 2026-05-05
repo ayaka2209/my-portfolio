@@ -488,15 +488,6 @@ section {
   background: radial-gradient(circle at 30% 30%, rgba(232,33,95,0.1), transparent 60%);
 }
 
-.profile-decoration {
-  position: absolute;
-  top: -1rem; right: -1rem;
-  width: 100px; height: 100px;
-  border: 1px solid var(--accent);
-  opacity: 0.25;
-  transition: border-color 0.3s;
-}
-
 /* ===== SKILLS ===== */
 .skills-section {
   padding: 3rem 5vw 5rem;
