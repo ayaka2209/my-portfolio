@@ -465,6 +465,34 @@ section {
   transition: color 0.3s;
 }
 
+.about-highlights {
+  list-style: none;
+  padding: 1.5rem 0 0;
+  margin: 1.5rem 0 0;
+  border-top: 1px solid var(--border);
+  transition: border-color 0.3s;
+}
+
+.about-highlights li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.65rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  transition: color 0.3s;
+}
+
+.about-highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 0.5rem;
+  height: 1px;
+  background: var(--primary);
+}
+
 .profile-visual { position: relative; }
 
 .profile-placeholder {
